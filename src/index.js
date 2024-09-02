@@ -15,15 +15,39 @@ function refreshWeather(response){
 
     let humidElement = document.querySelector("#humid");
     let humid = response.data.temperature.humidity;
-    humidElement.innerHTML = humid + " %";
+    humidElement.innerHTML = `${humid} %`;
 
     let windElement = document.querySelector("#wind");
     let wind = response.data.wind.speed;
-    windElement.innerHTML = wind + " km/h";
+    windElement.innerHTML = `${wind}  km/h`;
+
+    let timeElement = document.querySelector("#time");
+    let weatherDate = new Date(response.data.time * 1000);
+    timeElement.innerHTML = formatDate(weatherDate);
+    // timeElement.innerHTML = response.data.
 
     let iconElement = document.querySelector("#weather-icon");
     // let icon = response.data.condition.icon;
     // iconElement.innerHTML = icon;
+
+    function formatDate(date){
+
+        let weekDays = ["Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let day = weekDays[date.getDay()];
+
+        if(minutes < 10){
+            minutes = `0${minutes}`;
+        }
+
+        return `${day} ${hours}:${minutes}`;
+
+
+
+
+    }
 }
 
 
