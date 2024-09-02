@@ -78,7 +78,7 @@ p{
     border: none;
 }
 
-.humid{
+.humid, .wind{
   color: red;
 }
   
@@ -93,13 +93,9 @@ p{
     font-style: bold;
   }
 
-  
-
   footer{
     text-align: center;
   }
-  
-  
   
   a {
     font-weight: 100;

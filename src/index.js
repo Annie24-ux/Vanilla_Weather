@@ -7,6 +7,23 @@ function refreshWeather(response){
     cityElement.innerHTML = response.data.city;
 
     temperatureElement.innerHTML = temperature;
+
+    let descriptionElement = document.querySelector("#description");
+    let description = response.data.condition.description;
+    descriptionElement.innerHTML = ", " + description;
+
+
+    let humidElement = document.querySelector("#humid");
+    let humid = response.data.temperature.humidity;
+    humidElement.innerHTML = humid + " %";
+
+    let windElement = document.querySelector("#wind");
+    let wind = response.data.wind.speed;
+    windElement.innerHTML = wind + " km/h";
+
+    let iconElement = document.querySelector("#weather-icon");
+    // let icon = response.data.condition.icon;
+    // iconElement.innerHTML = icon;
 }
 
 
