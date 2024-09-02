@@ -7,7 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+<link rel="stylesheet" href="styles.css">
   <title>SheCodes</title>
 </head>
 <body>
@@ -17,8 +18,8 @@
     <h1 class="intro">Welcome to the Weather app</h1>
 
     <header>
-      <form>
-        <input id="input" type="text" placeholder="Enter your city...">
+      <form id="search-form">
+        <input id="form-input" type="text" placeholder="Enter your city..." required>
         <input id="answer" type="button" value="Search">
       </form>
     </header>
@@ -29,7 +30,7 @@
       <div id="weather-div">
 
         <div class="weather-details">
-          <h1 class="current-city">Malelane</h1>
+          <h1 class="current-city" id="city"></h1>
           <p class="curr-deets">
             <span class="date">Wednesday 09:05, clear clouds</span><br/>
             Humidity: <strong class="humid">72%</strong>, Wind: <strong class="humid">9.2km/h</strong>
@@ -39,7 +40,7 @@
         <div class="current-weather">
           <br>
           <span id="weather-icon">🌤️ </span>
-          <span id="temp-value"> 15 </span>
+          <span id="temperature"> 15 </span>
           <span id="metric">°C</span>
         </div>
 
