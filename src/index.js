@@ -24,9 +24,9 @@ function refreshWeather(response){
     let timeElement = document.querySelector("#time");
     let weatherDate = new Date(response.data.time * 1000);
     timeElement.innerHTML = formatDate(weatherDate);
-    // timeElement.innerHTML = response.data.
 
     let iconElement = document.querySelector("#weather-icon");
+    iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
     // let icon = response.data.condition.icon;
     // iconElement.innerHTML = icon;
 
@@ -74,5 +74,7 @@ function searchSubmitHandler(event){
 
 let searchFormElement = document.querySelector("#answer");
 searchFormElement.addEventListener("click", searchSubmitHandler);
+
+citySearch("Malelane");
 
 

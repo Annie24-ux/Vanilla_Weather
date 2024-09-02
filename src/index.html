@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
 <link rel="stylesheet" href="styles.css">
-  <title>SheCodes</title>
+  <title>Weather_App</title>
 </head>
 <body>
 
@@ -33,7 +33,6 @@
           <h1 class="current-city" id="city"></h1>
           <p class="curr-deets">
             <span id="time"></span>
-            <!-- <span class="date">Wednesday 09:05</span> -->
             <span id="description"></span><br/>
             Humidity: <strong class="humid" id="humid"></strong>, Wind: <strong class="wind" id="wind"></strong>
           </p>
@@ -41,7 +40,8 @@
         
         <div class="current-weather">
           <br>
-          <span id="weather-icon">🌤️ </span>
+          <div class="weather-icon" id="weather-icon">
+          </div>
           <span id="temperature"></span>
           <span id="metric">°C</span>
         </div>
